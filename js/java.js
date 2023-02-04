@@ -25,12 +25,14 @@ class empolyee extends person{
 function showField(){
     
     if(type.value=='s'){
-        document.getElementById('e_salary').style.visibility="hidden";
-        document.getElementById('current_class').style.visibility="visible";
-
-    }else{
-        document.getElementById('current_class').style.visibility="hidden";
         document.getElementById('e_salary').style.visibility="visible";
+        document.getElementById('emp_sal').type="text";
+        document.getElementById('emp_sal').placeholder="Current Class";
+        
+    }else{
+        document.getElementById('e_salary').style.visibility="visible";
+        document.getElementById('emp_sal').type="number";
+        document.getElementById('emp_sal').placeholder="Salary";
 
     }
 }
@@ -52,11 +54,13 @@ function studentAddToList(student){
 function clearin(){
     document.getElementById('name').value='';
     document.getElementById('bod').value='';
-    document.getElementById('student_class').value='';
     document.getElementById('emp_sal').value='';
-    document.getElementById('gender_select').value='';
+    document.getElementById('emp_sal').value='';
+    document.getElementById('gender_select').selectedIndex=0;
+    document.getElementById('city_select').selectedIndex=0;
+    document.getElementById('select_type').value='Choose Your type';
+    document.getElementById('e_salary').style.visibility="hidden";
 
-    
 
 }
 
@@ -78,12 +82,16 @@ document.getElementById('insert_form').addEventListener('submit',function(e){
     let empoloyees=[];
     const name=document.getElementById('name').value;
     const dob=document.getElementById('bod').value;
-    const gender=document.getElementById('gender_select').value;
+    //const gender=document.getElementById('gender_select').value;
+   
+    var g = document.getElementById('gender_select');
+    const gender = g.options[g.selectedIndex].text; 
+   
     var t = document.getElementById('city_select');
     const city = t.options[t.selectedIndex].text;
     var v = document.getElementById('select_type');
     const type = v.options[v.selectedIndex].text;
-    const student_class=document.getElementById('student_class').value;
+    const student_class=document.getElementById('emp_sal').value;
     const empolyee_sal=document.getElementById('emp_sal').value;
     
     

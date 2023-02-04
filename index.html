@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Registration form</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -36,7 +36,7 @@
             <div class="card card-2">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h1 class="title">Registration Info</h1>
+                    <h1 class="title">Registration Form</h1>
                     <form method="POST" id="insert_form">
                         <br>
                         <br>
@@ -51,50 +51,44 @@
                                 </div>
                             </div>
                             <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender" id="gender_select">
-                                            <option disabled="disabled" selected="selected">Gender</option>
-                                            <option value="m">Male</option>
-                                            <option value="f">Female</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
+                                <div class="form-row">
+                                    <select name="" id="gender_select" class="form-control" required>
+                                        <option  disabled selected>Choose Your gender</option>
+                                        <option value="m">Male</option>
+                                        <option value="f">Female</option>
+                                    </select>	
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select id="city_select"class="form-select" class="form-select"   >
-                                    <option disabled="disabled" selected="selected"> Your Birth Cirty </option>
-                                    <option >Hebron </option>
-                                    <option >Nablus</option>
-                                    <option >Bethlehem</option>
-                                    <option >Jerusalem</option>
-                                    <option >Jenin</option>
-                                    <option > tulkarem</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
+                        
+                        <div class="form-row">
+                            
+                            <select name="" id="city_select" class="form-control" required>
+                                <option disabled selected>Choose place of your birth</option>
+                                <option >Hebron</option>
+                                <option >Bethlehem</option>
+                                <option >Ramallah</option>
+                                <option >Jenin</option>
+                                <option >Nablus</option>
+
+                            </select>	
                         </div>
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class" id="select_type" onchange="showField()">
-                                    <option disabled="disabled" selected="selected"  >Person Type</option>
-                                    <option value="s">Student</option>
-                                    <option value="e">Employee</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
+
+                        <div class="form-row">
+                            <select  id="select_type" class="form-control" required onchange="showField()">
+                                <option  disabled selected>Choose Your type</option>
+                                <option value="s">Student</option>
+                                <option value="e">Employee</option>
+                            </select>	
                         </div>
+
+                       
                         <table class="center">
                             <tr>
                               <th><div class="input-group sal_style" id="e_salary" >
-                                <input class="input--style-2 " type="number" id="emp_sal" placeholder="Salary" name="name">
+                                <input class="input--style-2 "  id="emp_sal" placeholder="Salary" name="name">
                             </div></th>
-                              <th><div class="input-group sal_style" id="current_class">
-                                <input  class="input--style-2" type="text" id="student_class" placeholder="Current class" name="name">
-                            </div></th>
+                     
                             </tr>
                             </table>
                         <div class="p-t-30">

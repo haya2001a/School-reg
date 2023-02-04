@@ -69,7 +69,34 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+.form-row-last {
+  margin-top: 35px;
+}
+.form-row-last input {
+padding: 15px;
+}
+.form-row {
+  width: 100%;
+  position: relative;
+}
+.form-row input:focus {
+	border-bottom: 2px solid #2bb33e;
+}
+.form-control {
+	width: 100%;
+	height: 47px;
+	display: block;
+	border: 1px solid #e6e6e6;
+	background: none;
+	border-radius: 5px;
+	padding: 0 19px; }
 
+select.form-control {
+cursor: pointer;
+color: #999; }
+.form-control{
+	margin-bottom: 28px;
+}
 /* ==========================================================================
    #RESET
    ========================================================================== */
@@ -519,7 +546,7 @@ input {
 }
 
 .card-2 .card-heading {
-  background: url("../images/8.PNG") top left/cover no-repeat;
+  background: url("../images/zyro-image.png") top left/cover no-repeat;
   width: 25%;
   display: table-cell;
   position:block;
